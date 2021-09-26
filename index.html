@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>EasyPaySend</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href=""><img src="img/logo.svg" alt=""></a>
+            </div>
+            <h1 class="header__title">Перевод с карты на карту</h1>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="container">
+            <form action="#">
+                <div class="card__wrapper">
+                    <div class="card__back">
+                        <div class="card__item">
+                            <h3 class="card__title">Отправитель <img src="img/card.png" alt="card"></h3>
+                            <label for="mynumber">Номер карты Отправителя</label>
+                            <input id="mynumber" type="number" placeholder="0000 0000 0000 0000" name="mycard" required>
+                            <div>
+                                <label for="myname">Владелец карты</label>
+                                <label for="date" class="card-date">Срок действия</label>
+                            </div>
+                            <input id="myname" type="text" name="name" placeholder="NIKOLAY IVANOV" required>
+
+                            <input id="date" type="number" name="month" placeholder="ММ" max="12" required><span>/</span>
+                            <input id="date2" type="number" name="year" placeholder="ГГ" max="99" required>
+                        </div>
+                        <div class="card__body">
+                            <div class="card-bg"></div>
+                            <label for="cvv">CVV</label>
+                            <input id="cvv" type="password" name="cvv" placeholder="***" required>
+                            <p class="card__back-text">Код с обратной строны</p>
+                        </div>
+                    </div>
+                    <div class="card__item">
+                        <h3 class="card__title">Получатель <img src="img/card.png" alt="card"></h3>
+                        <label for="addressee">Номер карты получателя</label>
+                        <input id="addressee" type="number" placeholder="0000 0000 0000 0000" name="addressee" required>
+                    </div>
+                </div>
+                <div class="card__info">
+                    <div class="card-text">
+                        <label for="amount">Сумма перевода</label>
+                        <label for="tax">Комиссия</label>
+                    </div>
+                    <input id="amount" type="number" name="amount" placeholder="0.00" required>
+                    <input id="tax" type="text" name="tax" value="0.00" readonly>
+                    <p class="text">Нажимая на кнопку «Отправить», вы подтверждаете свое согласие с <a href="oferta.html" target="_blank">условиями Оферты</a></p>
+                    <button class="btn" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="info">
+            <div class="info__item">
+                <p class="info__text">Переводы на карту любого российского банка. Максимальная сумма одного перевода без учета комиссии - NNN рублей, минимальная — NNN рублей.</p>
+            </div>
+            <div class="info__item">
+                <p class="info__text">Срок зачисления средств зависит от банка получателя перевода, и может составлять от нескольких минут до нескольких дней.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <footer class="footer">
+            <div class="footer__logo">
+                <a href="#"><img src="img/logofooter.svg" alt=""></a>
+            </div>
+            <p class="info__text">Телефон поддержки: бесплатный по РФ <a href="tel:88001002020">8 (800) 100-20-20</a> , для Москвы<a href="tel:+74952223355"> +7 (495) 222-33-55</a></p>
+            <p class="footer__info">Банки-эмитенты карт могут устанавливать дополнительные условия и ограничения при переводе. С дебетовых и зарплатных карт дополнительные комиссии, как правило, не взимаются. Рекомендуем ознакомиться с тарифами банка-эмитента.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
